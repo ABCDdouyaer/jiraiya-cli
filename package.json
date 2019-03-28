@@ -26,7 +26,7 @@
   "directories": {
     "lib": "lib"
   },
-  "description": "",
+  "description": "generator readme.md",
   "homepage": "https://github.com/ABCDdouyaer/jiraiya-cli",
   "repository": {
     "type": "git",
