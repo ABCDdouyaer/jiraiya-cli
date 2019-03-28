@@ -1,6 +1,6 @@
 {
   "name": "jiraiya-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,7 +8,7 @@
   "bin": {
     "boom": "index.js"
   },
-  "keywords": [],
+  "keywords": ["cli", "readme"],
   "author": "Jiraiya",
   "license": "ISC",
   "dependencies": {
@@ -27,9 +27,9 @@
     "lib": "lib"
   },
   "description": "",
-  "homepage": "https://github.com/fengmk2/emoji",
+  "homepage": "https://github.com/ABCDdouyaer/jiraiya-cli",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fengmk2/emoji.git"
+    "url": "git@github.com:ABCDdouyaer/jiraiya-cli.git"
   }
 }
