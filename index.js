@@ -4,6 +4,23 @@ const program = require('commander');
 const callBack = require('./lib/commander-callback');
 const chalk = require('chalk');
 
+
+program.on('--help', () => {
+    console.log('')
+    console.log(chalk.green('Boom cli 为leek项目提供快捷易用的命令'))
+    console.log('')
+  })
+
+function help () {
+program.parse(process.argv)
+if (program.args.length < 1){
+    callBack.cliSymbolAction()
+    return program.help()
+}
+}
+help()
+
+
 program.version(require('./package.json').version, '-v, --version')
 program.usage('init')
 program.command('init')
@@ -24,6 +41,9 @@ program.command('pic')
 program.command('list')
        .description('生成所有包的列表')
        .action(callBack.generatorListAction)
+program.command('webpack')
+       .description('生成webpack资源列表')
+       .action(callBack.webpackAction)
 program.parse(process.argv)
 
 program.on('command:*', (e) => {
@@ -31,19 +51,6 @@ program.on('command:*', (e) => {
 })
 
 
-program.on('--help', () => {
-        console.log('')
-        console.log(chalk.green('Boom cli 为leek项目提供快捷易用的命令'))
-        console.log('')
-      })
 
-function help () {
-    program.parse(process.argv)
-    if (program.args.length < 1){
-        callBack.cliSymbolAction()
-        return program.help()
-    }
-}
-help()
 
 
